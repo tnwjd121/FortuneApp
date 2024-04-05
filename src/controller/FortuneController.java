@@ -49,6 +49,10 @@ public class FortuneController {
 					// 운세 수정 - 취소 메뉴도 추가하는게 좋다
 					updateFortune();
 					break;
+				case 5:
+					// 운세 삭제
+					deleteFortune();
+					break;
 			}
 		}
 	}
@@ -73,6 +77,14 @@ public class FortuneController {
 	// 하나의 운세 출력 - read
 	public void getFortune() {
 		fortuneView.getFortune(fortuneService.getFortuneDtos());
+	}
+	
+	// 운세를 삭제(Delete)
+	public void deleteFortune() {
+		// 삭제할 인덱스 값 가져오기
+		int index = fortuneView.getDeleteIndex();
+		// 인덱스 값을 주고 운세 하나를 배열에서 삭제
+		fortuneService.deleteFortune(index);
 	}
 
 

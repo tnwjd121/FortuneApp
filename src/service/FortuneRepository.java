@@ -33,5 +33,12 @@ public class FortuneRepository implements FortuneService {
 		fortuneDtos.add(fDto);
 	}
 
+	@Override
+	public void deleteFortune(int index) {
+		// 인덱스 값으로 삭제하기
+		fortuneDtos.remove(index);
+		
+	}
+
 
 }

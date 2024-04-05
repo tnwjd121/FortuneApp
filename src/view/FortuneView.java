@@ -33,7 +33,8 @@ public class FortuneView {
 		System.out.println("1. 포춘 쿠키 열기");
 		System.out.println("2. 운세 저장");
 		System.out.println("3. 운세 전체 출력");
-		System.out.println("4. 운세 수정하기");
+		System.out.println("4. 운세 수정");
+		System.out.println("5. 운세 삭제");
 		System.out.print("메뉴 선택:");
 		int choice = -1;
 		choice = scanner.nextInt();
@@ -67,6 +68,14 @@ public class FortuneView {
 		String fortuneStr =  scanner.nextLine();
 		// 운세를 저장한 포춘 인스턴스 생성 및 배열에 저장 -> 레파지토리 클래스가 담당
 		return fortuneStr;
+	}
+
+	public int getDeleteIndex() {
+		System.out.println("--------------운세를 삭제합니다.--------------");
+		System.out.println("--------------삭제 할 운세 번호를 입력해 주세요.--------------");	
+		int index = scanner.nextInt();
+		scanner.nextLine();
+		return index;
 	}
 
 

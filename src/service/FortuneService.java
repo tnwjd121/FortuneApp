@@ -15,6 +15,9 @@ public interface FortuneService {
 
 	// UPDATE(수정)
 	void updateFortune(int index, String fortuneStr);
+
+	//  DELETE(삭제)
+	void deleteFortune(int index);
 	
 
 }
