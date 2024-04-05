@@ -8,9 +8,19 @@ public class FortuneController {
 	private FortuneView fortuneView;
 	private FortuneService fortuneService;
 	
+	
 	public FortuneController(FortuneService fortuneService) {
 		this.fortuneView = new FortuneView();
 		this.fortuneService = fortuneService;
+	}
+	// 운세를 수정
+	public void updateFortune() {
+		// 수정하고 싶은 운세의 인덱스 값을 받아 옴
+		int index = fortuneView.getUpdateIndex();
+		// 수정하고 싶은 운세 문자열을 받아 옴
+		String fortuneStr = fortuneView.getUpdateStr();
+		// 인덱스 값을 가지고 배열에서 수정
+		fortuneService.updateFortune(index, fortuneStr);
 	}
 	
 	// 앱 시작
@@ -34,6 +44,10 @@ public class FortuneController {
 				case 3:
 					// 운세 전체 출력
 					getFortunes();
+					break;
+				case 4:
+					// 운세 수정 - 취소 메뉴도 추가하는게 좋다
+					updateFortune();
 					break;
 			}
 		}

@@ -12,6 +12,9 @@ public interface FortuneService {
 	
 	// Create(생성) - 운세를 생성하는 메소드
 	void createFortune(String fortuneStr);
+
+	// UPDATE(수정)
+	void updateFortune(int index, String fortuneStr);
 	
 
 }

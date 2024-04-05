@@ -17,4 +17,10 @@ public class FRepoFile implements FortuneService{
 		return null;
 	}
 
+	@Override
+	public void updateFortune(int index, String fortuneStr) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

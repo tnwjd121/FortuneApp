@@ -44,6 +44,8 @@ public class FortuneApp {
 		// 랜덤으로 하나의 운세를 출력
 //		fController.getFortune();
 		
+		// 운세를 수정하기 - Update
+		
 		// 앱 실행
 		fController.runApp();
 	}
